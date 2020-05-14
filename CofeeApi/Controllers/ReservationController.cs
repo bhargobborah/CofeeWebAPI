@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CofeeApi.Data;
+﻿using CofeeApi.Data;
 using CofeeApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,7 +9,7 @@ namespace CofeeApi.Controllers
     [ApiController]
     public class ReservationController : ControllerBase
     {
-        CofeeDbContext _cofeeDbContext;
+        private readonly CofeeDbContext _cofeeDbContext;
 
         public ReservationController(CofeeDbContext cofeeDbContext)
         {
